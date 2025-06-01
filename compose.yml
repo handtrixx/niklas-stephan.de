@@ -7,7 +7,7 @@ services:
     volumes:
       - ./content:/hugo/content
       - ./theme:/hugo/themes/theme
-      - ./dist:/hugo/dist
+      #- ./dist:/hugo/dist
       - ./hugo.toml:/hugo/hugo.toml
     environment:
       - URL=https://niklas-stephan.de

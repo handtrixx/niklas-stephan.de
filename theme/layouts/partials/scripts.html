@@ -4,7 +4,6 @@
 {{ $combinedJS := slice $js1 $js2 | resources.Concat "js/scripts.js" }}
 {{ $combinedJS = $combinedJS | minify }}
 {{ if hugo.IsProduction }}
-    {{ $giscusTheme = printf "%scss/giscuss.css" .Site.BaseURL }}
     {{ $combinedJS = $combinedJS | fingerprint | resources.PostProcess }}
 {{ end }}
 
