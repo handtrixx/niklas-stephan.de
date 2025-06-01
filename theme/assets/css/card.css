@@ -1,0 +1,55 @@
+.card {
+    border-radius: 12px;
+    margin: 8px;
+    background-color: var(--color-light);
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+    /* MD3 default elevation */
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 
+                0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+}
+
+.card:hover {
+    /* MD3 elevated state */
+    box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 
+                0px 1px 3px 0px rgba(0, 0, 0, 0.30);
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+/* Dark theme adjustments */
+[data-ui-theme="dark"] .card {
+    background-color: var(--color-light);
+    /* MD3 dark theme default elevation */
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.30), 
+                0px 2px 1px -1px rgba(255, 255, 255, 0.12);
+}
+
+[data-ui-theme="dark"] .card:hover {
+    /* MD3 dark theme elevated state */
+    box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.30), 
+                0px 2px 3px -1px rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+}
+
+.card-image {
+    border-radius: 12px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-placeholder {
+    margin: auto;
+    display: block;
+    height: 200px;
+    object-fit: scale-down;
+}
+
+.card-text {
+    padding: 10px;
+}
+
+.card-headline {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}

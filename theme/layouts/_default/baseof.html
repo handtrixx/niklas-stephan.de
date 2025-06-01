@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}" data-ui-theme="light">
+
+<head>
+  {{ partial "cssvariables.html" . }}
+  {{ partial "head.html" . }} 
+</head>
+
+<body>
+  {{ partial "header.html" . }}
+  <main class="">
+    {{ block "main" . }}{{ end }}    
+  </main>
+  <footer id="footer">
+    <!-- Matomo Image Tracker-->
+    <img referrerpolicy="no-referrer-when-downgrade" src="https://stats.handtrixxx.com/matomo.php?idsite=1&amp;rec=1"
+      style="border: 0" alt="" />
+    <!-- End Matomo -->
+    {{ partial "footer.html" . }}
+  </footer>
+  {{ partial "scripts.html" . }}
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+<div class="table-responsive">
+    {{ $tableContent := .Inner | markdownify }}
+    {{ $tableContent := replaceRE "<table>" (printf "<table class=\"table %s\">" (.Get "class")) $tableContent }}
+    {{ $tableContent | safeHTML }}
+</div>

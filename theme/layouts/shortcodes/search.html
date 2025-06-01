@@ -1,0 +1,62 @@
+<form id="custom-search" name="custom-search" method="post" action="" onsubmit="customSearchResults(); return false;"
+    class="">
+    <div class="md3-field">
+        <input class="md3-input" id="custom-search-field" type="text" name="search"
+            value="" title="Search String" placeholder="Wonach suchst du?">
+    </div>
+</form>
+<hr />
+
+<div class="" id="custom-search-results"></div>
+
+<script>
+    const respHtml = `
+    <a href="[URL]" class="text-decoration-none card">
+        <div class="fs" style="--fs-scale:2">
+            [TITLE]
+        </div>
+        <div class="mb" style="--mb-scale:4;">
+            <em>[DATE] - [SECTION]- [TAGS]</em>
+        </div>
+        <div class="">
+            [SUMMARY]
+        </div>
+    </a>`;
+    // CUSTOM AREA
+    let params = {
+        json_src: '/index.json', // for multiple sources: comma separated list of JSONarrays
+        minlength: 3,
+        defaultsearch: 'AND',
+        sort_date: 'DESC',
+        autocomplete: 1, // 0: form needs a submit button
+        section_search: 0, // 1: needs checkboxes with name="section[]"
+        badwords: 'und,oder,aber,wenn,also,der,die,das,den,dem,des,ein,eines,einer', //ignore this words
+        json_wait: '<p class="text-center pt-2"><em>Einen Moment bitte, Suche wird geladen...</em></p>',
+        json_ready: '<p class="text-center pt-2"><em>Bitte geben Sie einen Suchbegriff ein</em></p>',
+        extern_icon: ' (externer Link)', // marker for external links (optional)
+        err_badstring: '<p class="text-center pt-2">Der Suchbegriff ist zu kurz!</p>',
+        err_noresult: '<p class="text-center pt-2">Leider kein Suchergebnis. Bitte versuchen Sie es noch einmal.</p>',
+        err_norequest: '<p class="text-center pt-2">Die Volltextsuche steht zur Zeit nicht zurVerfügung.</p>',
+        err_filefailed: '<p class="text-center pt-2">Eine Datei konnte nicht abgerufen werden.</p>',
+        res_one_item: '<p class="pt-4"><em>[CNT] SUCHERGEBNIS</em></p>',
+        res_more_items: '<p class="pt-4"><em>[CNT] SUCHERGEBNISSE</em></p>',
+        res_out_top: '<div class="list-group">',
+        res_out_bottom: '</div>',
+        res_item_tpl: respHtml,
+    };
+
+    // Translation of section name (optional)
+    let section_trans = {
+        "post": "Blog",
+        // "other-section" : "Other Section"
+    };
+
+    let searchfield_weight = {
+        "title": 5,
+        "tags": 5,
+        "summary": 2,
+        "content": 1
+    };
+    // CUSTOM AREA END
+</script>
+<script type="text/javascript" src="/js/search.js"></script>

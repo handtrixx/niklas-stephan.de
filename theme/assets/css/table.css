@@ -1,0 +1,63 @@
+
+table {
+    width: 100%;
+    margin-bottom: 12px;
+    border-collapse: collapse;
+    color: var(--color-darker);
+    /* Add responsive scrolling directly to table */
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+    border-radius: 12px;
+    background-color: var(--color-lighter);
+    box-shadow: var(--md-sys-elevation-1, 0px 1px 3px 1px rgba(0, 0, 0, 0.15));
+    -webkit-overflow-scrolling: touch;
+    border: 8px solid var(--color-lighter);
+}
+
+table thead {
+    background-color: var(--color-lighter);
+}
+
+table th {
+    padding: 16px;
+    text-align: left;
+    font-weight: 800;
+    color: var(--color-darker);
+    white-space: nowrap;
+    border-bottom: 1px solid var(--color-dark);
+}
+
+table td {
+    padding: 16px;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--color-gray);
+}
+
+tbody tr:nth-of-type(odd) {
+    background-color: var(--color-lighter);
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: var(--color-light);
+}
+
+tbody tr:hover {
+    background-color: var(--color-light);
+    transition: background-color 0.5s ease;
+}
+
+
+/* Responsive behavior */
+@media screen and (max-width: 768px) {
+    .table-responsive {
+        margin: 8px 0;
+        border-radius: 12px;
+    }
+
+    table th,
+    table td {
+        padding: 12px;
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,33 @@
+.post-container > p > img,
+.post-container > img
+ {
+    max-height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-container > hr {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+
+}
+.post-meta > .tags > .badge {
+    top: 0 !important;
+    margin-left: 8px;
+    background-color: var(--color-secondary);
+}
+
+.giscus {
+    background-color: var(--color-light);
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 8px;
+    border-radius: 12px;
+}

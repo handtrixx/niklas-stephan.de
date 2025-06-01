@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: {{ "sitemap.xml" | absURL }}
+
+# Disallow development environment
+{{ if hugo.IsProduction }}
+# Production environment - allow all
+{{ else }}
+# Development environment - disallow all
+Disallow: /
+{{ end }}

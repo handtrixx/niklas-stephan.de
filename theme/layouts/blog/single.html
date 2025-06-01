@@ -1,0 +1,74 @@
+{{ define "main" }}
+
+<div id="page-assitant-toggler" class="position-fixed bottom-0 right-0">
+  <button type="button" class="btn btn-circle p mb me" onClick="togglePostNav();" alt="Einstellungen"
+    style="--p-scale: 0; --mb-scale: 4; --me-scale: 4">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-gear"
+      viewBox="0 0 16 16">
+      <path
+        d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0" />
+      <path
+        d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z" />
+    </svg>
+  </button>
+</div>
+<div class="block-post-nav d-none" id="block-post-nav">
+  <div class="p pt w-100" style="--p-scale: 2;--pt-scale: 5;">
+    <div class="d-flex justify-content-center align-items-center">
+      <h5 class="mb" style="align-self: center;--mb-scale: 0;">Konfiguration</h5>
+      <button class="ms-auto btn-circle-text-small" onclick="togglePostNav()" aria-label="Close navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+          viewBox="0 0 16 16">
+          <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+        </svg></button>
+
+    </div>
+    <hr class="my" style="--my-scale: 4;">
+    <h6>Inhalt</h6>
+    <ul class="content-index-list" id="content-index-list">
+      <li class="content-index-item active" onClick="scrollToTop()">Anfang</li>
+    </ul>
+  </div>
+</div>
+
+<div class="post-container">
+  <nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/blog">
+          Blog
+        </a>
+      </li>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right mx"
+        style="--mx-scale:2;" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+      </svg>
+      <li class="breadcrumb-item active" aria-current="page">
+        Beitrag
+      </li>
+    </ul>
+  </nav>
+  <h1 class="fs" style="--fs-scale: 3;">{{ .Title }}</h1>
+
+  <!-- Blog post specific elements -->
+  <div class="post-meta mb-4">
+    <time datetime="{{ .Date.Format " 2006-01-02" }}">{{ .Date.Format "2. January 2006" }}</time>
+    {{ if .Params.tags }}
+    <div class="tags mt-2">
+      {{ range .Params.tags }}
+      <span class="badge bg-secondary me-1">{{ . }}</span>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+
+  {{ .Content }}
+
+  <!-- Blog post specific footer content like comments -->
+
+</div>
+<div class="giscus"></div>
+
+{{ end }}

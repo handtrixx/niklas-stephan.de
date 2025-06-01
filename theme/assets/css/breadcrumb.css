@@ -1,0 +1,16 @@
+.breadcrumb {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+}
+
+.breadcrumb-item > a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    font-weight: bold;
+}
+

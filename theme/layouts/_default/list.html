@@ -1,0 +1,99 @@
+{{ define "main" }}
+
+<div id="page-assitant-toggler" class="position-fixed bottom-0 right-0">
+  <button type="button" class="btn btn-circle p mb me" onClick="toggleBlogNav();" alt="Einstellungen"
+    style="--p-scale: 0; --mb-scale: 4; --me-scale: 4">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-gear"
+      viewBox="0 0 16 16">
+      <path
+        d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0" />
+      <path
+        d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z" />
+    </svg>
+  </button>
+</div>
+<div class="block-blog-nav d-none" id="block-blog-nav">
+  <div class="p pt w-100" style="--p-scale: 2;--pt-scale: 5;">
+    <div class="d-flex justify-content-center align-items-center">
+      <h5 class="mb" style="align-self: center;--mb-scale: 0;">Konfiguration</h5>
+      <button class="ms-auto btn-circle-text-small" onclick="toggleBlogNav()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-x-lg" viewBox="0 0 16 16">
+          <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+        </svg></button>
+
+    </div>
+
+    <hr class="my" style="--my-scale: 4;">
+    <h6>Filter</h6>
+
+    <div class="md3-field mb" style="--mb-scale: 4;">
+      <input type="text" class="md3-input" placeholder=" " aria-label="Search">
+      <label class="md3-label">Suche</label>
+    </div>
+    <h6>Sortierung</h6>
+    <div class="select-wrapper mb" style="--mb-scale: 4;">
+      <select class="md3-select" aria-label="Sort by" id="sort-select">
+        <option value="date-desc">Datum (neueste zuerst)</option>
+        <option value="date-asc">Datum (älteste zuerst)</option>
+        <option value="name-asc">Name (A-Z)</option>
+        <option value="name-desc">Name (Z-A)</option>
+      </select>
+      <span class="select-arrow"></span>
+    </div>
+    <h6>Tags</h6>
+    <div class="select-wrapper">
+      <select class="md3-select" id="tag-select" aria-label="Filter by tag">
+        <option value="all">
+          alle ({{ len .Site.RegularPages }})
+        </option>
+        {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+        <option value="{{ $name | lower }}">
+          {{ $name | lower }} ({{ $taxonomy.Count }})
+        </option>
+        {{ end }}
+      </select>
+      <span class="select-arrow"></span>
+    </div>
+
+
+  </div>
+</div>
+<div class="flex-container">
+  <div class="flex-blog-list">
+    <div class="flex-container flex-wrap">
+      {{ range where (where .Site.Pages "Section" "blog") ".Kind" "!=" "section" }}
+      <div class="flex-item-blog {{ range .Params.tags }}{{ . | lower }} {{ end }}">
+        <div class="card">
+          <a class="text-center" href="{{ .RelPermalink }}">
+            {{ $image := .Resources.GetMatch .Params.image }}
+            {{ with $image }}
+            {{ with .Resize "600x webp" }}
+            <img src="{{ .RelPermalink }}" class="card-image" alt="{{ . }}" />
+            {{ end }}
+            {{ else }}
+            <img src="/images/favicon.png" class="card-placeholder" alt="Default Image" />
+            {{ end }}
+          </a>
+          <div class="card-text">
+            <p class="fs-7"><em>{{ .Date.Format "02.01.2006" }}</em></p>
+            <a class="text-decoration-none" href="{{ .RelPermalink }}">
+              <div class="card-headline">{{ .Title }}</div>
+            </a>
+            <a class="text-decoration-none" href="{{ .RelPermalink }}">
+              <p class="">
+                {{ .Summary | plainify | truncate 120 }}
+              </p>
+            </a>
+
+          </div>
+        </div>
+      </div>
+      {{ end }}
+
+    </div>
+  </div>
+</div>
+
+{{ end }}

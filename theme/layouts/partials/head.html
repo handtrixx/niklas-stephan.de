@@ -1,0 +1,62 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width , initial-scale=1.0">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+<link rel="icon" href="{{ "images/favicon.png" | relURL }}" type="image/png">
+{{ $css1 := resources.Get "css/form.css" }}
+{{ $css2 := resources.Get "css/typography.css" }}
+{{ $css3 := resources.Get "css/nav.css" }}
+{{ $css4 := resources.Get "css/dropdown.css" }}
+{{ $css5 := resources.Get "css/button.css" }}
+{{ $css6 := resources.Get "css/footer.css" }}
+{{ $css7 := resources.Get "css/card.css" }}
+{{ $css8 := resources.Get "css/nsde.css" }}
+{{ $css9 := resources.Get "css/breadcrumb.css" }}
+{{ $css10 := resources.Get "css/table.css" }}
+{{ $css11 := resources.Get "css/post.css" }}
+{{ $css12 := resources.Get "css/hljs.css" }}
+
+<!-- concat $css1 and 2 -->
+{{ $cssraw := slice $css1 $css2 $css3 $css4 $css5 $css6 $css7 $css8 $css9 $css10 $css11 $css12 | resources.Concat "css/combined.css" }}
+{{ $css := $cssraw }}
+
+
+{{ if hugo.IsProduction }}
+{{ $css = $css | minify }}
+{{ $css = $css | fingerprint }}
+{{ end }}
+
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" {{ if hugo.IsProduction -}} integrity="{{ $css.Data.Integrity }}" {{- end }} />
+
+<!-- Meta Tags -->
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ end }}{{ end }}">
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ end }}{{ end }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+
+
+
+<!-- Image handling -->
+{{ $ogImage := "" }}
+{{ if .IsPage }}
+{{ with .Params.image }}
+{{ $permalink := $.Permalink | replaceRE ":1313" "" }}
+{{ $ogImage = (printf "%s%s" $permalink .) }}
+{{ end }}
+{{ else }}
+{{ with .Params.og_image }}
+{{ $ogImage = . | absURL | replaceRE ":1313" "" }}
+{{ end }}
+{{ end }}
+<meta property="og:image" content="{{ $ogImage }}">
+
+<!-- ... rest of code remains same ... -->
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description"
+    content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ end }}{{ end }}">
+<meta name="twitter:image" content="{{ $ogImage }}">

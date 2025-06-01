@@ -1,0 +1,31 @@
+{{ $js1 := resources.Get "js/nsde.js" }}
+{{ $js2 := resources.Get "js/main.js" }}
+
+{{ $combinedJS := slice $js1 $js2 | resources.Concat "js/scripts.js" }}
+{{ $combinedJS = $combinedJS | minify }}
+{{ $giscusTheme := "preferred_color_scheme" }}
+{{ if hugo.IsProduction }}
+    {{ $giscusTheme = printf "%scss/giscuss.css" .Site.BaseURL }}
+    {{ $combinedJS = $combinedJS | fingerprint | resources.PostProcess }}
+{{ end }}
+
+<script src="{{ $combinedJS.RelPermalink }}"></script>
+
+<!-- load script buildTags(targetlang) if blog page but not blog entry -->
+{{ if and (eq .Section "blog") (not .IsPage) }}
+<script src="/js/list.js"></script>
+{{ end }}
+
+<!-- Load giscus only if page is a blog entry but not the blog overview -->
+{{ if and (eq .Section "blog") .IsPage }}
+<script src="/js/post.js"></script>
+
+
+<script src="https://giscus.app/client.js" data-repo="handtrixx/content_niklas-stephan.de" data-repo-id="R_kgDOOFkuRg"
+data-category="Announcements" data-category-id="DIC_kwDOOFkuRs4CoSNu" data-mapping="pathname" data-strict="0"
+data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="{{ $giscusTheme }}"
+data-lang="de" data-loading="lazy" crossorigin="anonymous" async>
+</script>
+
+
+{{ end }}

@@ -1,0 +1,17 @@
+services:
+  hugo-nsde:
+    build: ./src/.
+    hostname: hugo-nsde
+    container_name: hugo-nsde
+    restart: unless-stopped
+    volumes:
+      - ./content:/hugo/content
+      - ./theme:/hugo/theme
+      - ./build:/hugo/build
+      - ./dist:/hugo/dist
+      - ./hugo.toml:/hugo/hugo.toml
+    environment:
+      - PRD_URL=https://niklas-stephan.de
+      - TARGET_REPO=https://github.com/username/repository
+    ports:
+      - "1313:1313"

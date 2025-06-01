@@ -1,0 +1,34 @@
+.nav-wrapper {
+    width: 100%;
+    position: fixed;
+    height: 64px;
+    top: 0;
+    background-color: var(--color-lighter);
+    opacity: 0.9;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.nav-link {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    margin-right: 8px;
+    color: inherit;
+}
+
+.nav-item {
+    text-decoration: none;
+}

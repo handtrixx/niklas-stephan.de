@@ -1,0 +1,88 @@
+theme = 'theme'
+ignoreLogs = ['warning-goldmark-raw-html']
+title = "niklas-stephan.de"
+languageCode = "de"
+languageDirection = "ltr"
+ 
+# Main menu
+[[menus.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 10
+
+[[menus.main]]
+identifier = "blog"
+name = "Blog"
+url = "/blog"
+weight = 20
+
+# Footer menu
+[[menus.footer]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 10
+
+[[menus.footer]]
+identifier = "blog"
+name = "Blog"
+url = "/blog"
+weight = 20
+
+[[menus.footer]]
+identifier = "privacy"
+name = "Datenschutz"
+url = "/privacy"
+weight = 30
+
+[[menus.footer]]
+identifier = "imprint"
+name = "Impressum"
+url = "/imprint"
+weight = 40
+
+[[menus.footer]]
+identifier = "search"
+name = "Suche"
+url = "/search"
+weight = 50
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+[markup.tableOfContents]
+endLevel = 2
+ordered = false
+startLevel = 2
+[markup.highlight]
+noClasses = true
+style = "github-dark"
+lineNos = true
+lineNumbersInTable = false
+
+[module]
+[module.hugoVersion]
+extended = false
+min = "0.115.0"
+[[module.mounts]]
+source = "assets"
+target = "assets"
+[[module.mounts]]
+source = "hugo_stats.json"
+target = "assets/watching/hugo_stats.json"
+
+[outputs]
+home = ["HTML", "JSON"]
+
+[build]
+[build.buildStats]
+enable = true
+
+[params]
+navbarbrand = 'iklas-stephan.de'
+colorprimary = "#dc3545"
+colorprimarylight = '#d70b0b'
+colorsecondarylight = '#4b5257'
+colorfooterbg = '#222020'
