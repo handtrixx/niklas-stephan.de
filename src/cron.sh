@@ -1,3 +1,4 @@
 #!/bin/bash
- hugo --environment production --destination /hugo/dist --baseURL $TARGET_URL --cleanDestinationDir --minify
+ hugo --environment production --destination /hugo/build --baseURL $URL --cleanDestinationDir --minify
 
+#Check for updates in 

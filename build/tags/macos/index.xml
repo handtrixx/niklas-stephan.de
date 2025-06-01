@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Macos on niklas-stephan.de</title><link>https://niklas-stephan.de/tags/macos/</link><description>Recent content in Macos on niklas-stephan.de</description><generator>Hugo</generator><language>de</language><lastBuildDate>Fri, 21 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://niklas-stephan.de/tags/macos/index.xml" rel="self" type="application/rss+xml"/><item><title>Apple Time Machine Backup auf einen Netzwerkspeicher mit Linux und Docker Compose</title><link>https://niklas-stephan.de/blog/docker-time-machine/</link><pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/docker-time-machine/</guid><description>&lt;p>Brauchen wir 2025 wirklich noch eine spezielle Lösung für das Backup unseres Rechners?
+Wir haben doch iCloud/OneDrive/…! – Korrekt, aber dabei handelt es sich um Dateisynchronisation und
+nicht um Backups! Den Unterschied und wie man mit Hilfe eines Raspberry Pi oder ähnlichem mit
+Docker Compose eine Backup Lösung für seinen Mac aufsetzt, die der original Apple TimeMachine in nichts nachsteht,
+erkläre ich in diesem Post.&lt;/p>
+&lt;h2 id="grundbegriffe-backup-vs-synchronisation">Grundbegriffe, Backup vs. Synchronisation&lt;/h2>
+&lt;p>Mit der sogenannten TimeMachine hatte Apple es wieder einmal geschafft,
+einen Service der bei anderen wahnsinnig kompliziert einzurichten ist/war, kinderleicht bedienbar zu machen.
+Leider scheinen Datensicherungen in das lokale Netz aus der Mode gekommen zu sein,
+so propagiert Apple selbst nur noch das Backup direkt auf einen USB-Speicher oder eben in die eigene iCloud.
+Dabei haben beide Lösungen größere Nachteile. Für das lokale Backup muss ich immer daran denken,
+dass externe Speichermedium in den Rechner zu stecken und kommt es z.B. zu einem Kurzschluss
+während beide Geräte miteinander verbunden sind, sind auch beide zerstört. Dahin ist die Datensicherung,
+genau dann wenn man sie am meisten braucht. Die Alternativen iCloud und Co. begleiten ebenfalls mehrere Nachteile.
+Zum Einem vertrauen wir unsere Daten einem externen Anbieter an, der uns zwar versprechen kann dass diese dort
+sicher und geschützt aufbewahrt werden, aber garantieren kann uns das niemand.
+Außerdem handelt es sich bei iCloud und ähnlichen zunächst nur um Services zur Dateisynchronisation.
+D.h. meine Daten werden parallel lokal und eben in der Cloud abgelegt. Das heisst auch,
+wenn ich eine Datei lokal lösche, passiert das gleiche auch in der Cloud. Und wieder Adieu liebe Dateischerung.
+Dem entgegen wirk die Dateiversionierung die entweder Standardmäßig oder optional aktiviert werden kann,
+allerdings habe ich selbst die Erfahrung gemacht, dass diese auch genau
+dann wenn man sie bräuchte gerade mal nicht funktioniert.&lt;/p></description></item></channel></rss>

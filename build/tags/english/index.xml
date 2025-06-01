@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>English on niklas-stephan.de</title><link>https://niklas-stephan.de/tags/english/</link><description>Recent content in English on niklas-stephan.de</description><generator>Hugo</generator><language>de</language><lastBuildDate>Sun, 28 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://niklas-stephan.de/tags/english/index.xml" rel="self" type="application/rss+xml"/><item><title>Setup your own ChatGPT clone in 5 minutes</title><link>https://niklas-stephan.de/blog/chatgpt-clone/</link><pubDate>Sun, 28 Apr 2024 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/chatgpt-clone/</guid><description>&lt;p>And another post about A.I… And why this headline? &lt;a href="https://chat.openai.com/" target="_blank">OpenAI’s ChatGPT&lt;/a>,
+&lt;a href="https://copilot.microsoft.com/" target="_blank">Microsoft’s Co-Pilot&lt;/a> and &lt;a href="https://www.salesforce.com/news/press-releases/2023/03/07/einstein-generative-ai/" target="_blank">Salesforce’s Einstein&lt;/a> are just running well! But,
+are they? And even if you are happy about them, are you willing to pay regular
+(not cheap) license fees for all of your employees, even if they just use it
+from time to time? Also, do you really trust Big Tech’s promises about confidentiallity,
+when it’s about your intellectual property? If you answer all of this by yes,
+you can stop reading, now.
+But, in case you would like to know how you easily can run your own A.I. chatbot
+or you are just curious like me, about how that is done, my article gives you an
+overview how to do that by utilizing the two amazing tools &lt;a href="https://ollama.com/" target="_blank">Ollama&lt;/a> and &lt;a href="https://openwebui.com/" target="_blank">Open WebUI&lt;/a>.&lt;/p></description></item><item><title>My website charged with Aritificial Intelligence</title><link>https://niklas-stephan.de/blog/ai-on-website/</link><pubDate>Sat, 06 Apr 2024 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/ai-on-website/</guid><description>&lt;p>After years of tinkering with various CMS systems and even creating one of my own,
+one thing remains constant: the struggle to craft captivating content! ⏳ But fear not,
+because I’m tapping into the newest technology – AI! ?
+Check out my latest post on how artificial intelligence maybe can revolutionize content creation,
+translations, and even programming. Dive into the cutting-edge with me at &lt;a href="https://niklas-stephan.de" target="_blank">niklas-stephan.de &lt;/a>!
+#AI #ContentCreation #Innovation“&lt;/p>
+&lt;h2 id="user-experience">User Experience&lt;/h2>
+&lt;p>&lt;img src="02_niklas-stephan.deBrandbyDesigner.png" alt="Brand Proposal">&lt;/p></description></item><item><title>Passwordless SSH Login to a Remote Server with Visual Studio Code</title><link>https://niklas-stephan.de/blog/ssh-copy-id/</link><pubDate>Thu, 08 Feb 2024 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/ssh-copy-id/</guid><description>&lt;p>Following article describes how to enable You to login to a Remote Server with the industry standard
+SSH network protocol by using a key and Visual Studio Code, so you do not have to enter your user/password every
+time you want to connect. It was written for/on MacOS, but the procedure should be the same on Linux and similar for Windows.&lt;/p>
+&lt;h2 id="preparation">Preparation&lt;/h2>
+&lt;p>At first &lt;a href="https://code.visualstudio.com/" target="_blank">download&lt;/a>, install and open VS Code.&lt;/p>
+&lt;p>&lt;img src="02_grafik.png" alt="Remote SSH">&lt;/p></description></item><item><title>Learn Next.js - Chapter 18: Docker Environment</title><link>https://niklas-stephan.de/blog/next-js-18/</link><pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/next-js-18/</guid><description>&lt;p>If you went successfully through Vercel&amp;rsquo;s free and amazing &lt;a href="https://nextjs.org/learn/dashboard-app" target="_blank">Learn Next.js&lt;/a> online course,
+you have end up in a nice and &amp;ldquo;fast&amp;rdquo; (the database access is actually slow,
+but that was on purpose for better understanding of the tutorial) Demo of a
+modern web application. You have also learned about plenty considerations
+when developing an web app. So now, you maybe feel like &amp;ldquo;How can I use all of this
+for a real project?&amp;rdquo;. Also there are still some constraints left like;
+&amp;ldquo;How can I get independent from Vercel&amp;rsquo;s nice but (in their free plan) slow hosting offer?&amp;rdquo;.&lt;/p></description></item></channel></rss>

@@ -28,8 +28,7 @@ EXPOSE 1313
 USER hugo
 
 WORKDIR /hugo
-RUN hugo new site www
-WORKDIR /hugo/www
+#RUN hugo new site www
 
 # Define the startup command
 CMD ["sh","/entrypoint.sh"]

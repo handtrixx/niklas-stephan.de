@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on niklas-stephan.de</title><link>https://niklas-stephan.de/blog/</link><description>Recent content in Blog on niklas-stephan.de</description><generator>Hugo</generator><language>de</language><lastBuildDate>Thu, 01 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://niklas-stephan.de/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Mobiltelefone 2025: Der King in Datenschutz und Nachhaltigkeit</title><link>https://niklas-stephan.de/blog/oss-mobiles-2025/</link><pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/oss-mobiles-2025/</guid><description>Ein Überblick über nachhaltige Mobiltelefone 2025, die die Daten des Benutzers schützen.</description></item><item><title>Herr Doktor, ich habe Wordpress, kann man da noch etwas machen?</title><link>https://niklas-stephan.de/blog/perfect-website-2025/</link><pubDate>Tue, 22 Apr 2025 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/perfect-website-2025/</guid><description>Ein umfassender Vergleich moderner CMS und Static Site Generators für 2025, erstellt von Niklas Stephan und seinem KI-Assistenten</description></item><item><title>Distrobox - oder: "Noch unabhängiger in Linux"</title><link>https://niklas-stephan.de/blog/distrobox/</link><pubDate>Wed, 19 Mar 2025 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/distrobox/</guid><description>&lt;p>Wenn du irgendwann genauso wie ich die Nase voll von MS Windows und Apple macOS hast, bleibt Linux als beliebteste
+und mittlerweile absolut konkurrenzfähige Alternative. Und schon stehst du vor der nächsten Entscheidung:
+Welches Linux darf es denn sein? Aber was wäre, wenn man einfach &amp;ldquo;jede&amp;rdquo; Art von Linux auf einmal laufen lassen könnte?
+Genau das verspricht &lt;a href="https://distrobox.it/" target="_blank">Distrobox&lt;/a>. Dieser Post geht kurz auf die Unterschiede
+zwischen Linux-Kernel, Distribution und Derivation ein und zeigt dann, wie man Distrobox installiert und konfiguriert.&lt;/p></description></item><item><title>Apple Time Machine Backup auf einen Netzwerkspeicher mit Linux und Docker Compose</title><link>https://niklas-stephan.de/blog/docker-time-machine/</link><pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/docker-time-machine/</guid><description>&lt;p>Brauchen wir 2025 wirklich noch eine spezielle Lösung für das Backup unseres Rechners?
+Wir haben doch iCloud/OneDrive/…! – Korrekt, aber dabei handelt es sich um Dateisynchronisation und
+nicht um Backups! Den Unterschied und wie man mit Hilfe eines Raspberry Pi oder ähnlichem mit
+Docker Compose eine Backup Lösung für seinen Mac aufsetzt, die der original Apple TimeMachine in nichts nachsteht,
+erkläre ich in diesem Post.&lt;/p>
+&lt;h2 id="grundbegriffe-backup-vs-synchronisation">Grundbegriffe, Backup vs. Synchronisation&lt;/h2>
+&lt;p>Mit der sogenannten TimeMachine hatte Apple es wieder einmal geschafft,
+einen Service der bei anderen wahnsinnig kompliziert einzurichten ist/war, kinderleicht bedienbar zu machen.
+Leider scheinen Datensicherungen in das lokale Netz aus der Mode gekommen zu sein,
+so propagiert Apple selbst nur noch das Backup direkt auf einen USB-Speicher oder eben in die eigene iCloud.
+Dabei haben beide Lösungen größere Nachteile. Für das lokale Backup muss ich immer daran denken,
+dass externe Speichermedium in den Rechner zu stecken und kommt es z.B. zu einem Kurzschluss
+während beide Geräte miteinander verbunden sind, sind auch beide zerstört. Dahin ist die Datensicherung,
+genau dann wenn man sie am meisten braucht. Die Alternativen iCloud und Co. begleiten ebenfalls mehrere Nachteile.
+Zum Einem vertrauen wir unsere Daten einem externen Anbieter an, der uns zwar versprechen kann dass diese dort
+sicher und geschützt aufbewahrt werden, aber garantieren kann uns das niemand.
+Außerdem handelt es sich bei iCloud und ähnlichen zunächst nur um Services zur Dateisynchronisation.
+D.h. meine Daten werden parallel lokal und eben in der Cloud abgelegt. Das heisst auch,
+wenn ich eine Datei lokal lösche, passiert das gleiche auch in der Cloud. Und wieder Adieu liebe Dateischerung.
+Dem entgegen wirk die Dateiversionierung die entweder Standardmäßig oder optional aktiviert werden kann,
+allerdings habe ich selbst die Erfahrung gemacht, dass diese auch genau
+dann wenn man sie bräuchte gerade mal nicht funktioniert.&lt;/p></description></item><item><title>Web Analytics selbstgemacht mit Matomo</title><link>https://niklas-stephan.de/blog/matomo/</link><pubDate>Mon, 05 Aug 2024 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/matomo/</guid><description>&lt;p>Jeder, der sich mit Internetauftritten beschäftigt, hat sicherlich schon von Google Analytics (&lt;a href="https://de.wikipedia.org/wiki/Google_Analytics">https://de.wikipedia.org/wiki/Google_Analytics&lt;/a>) gehört. Damit kann man u.a. sehen von wo, unter welchen technischen Bedingungen, wann auf welche Seiten eben dieser zugegriffen wird. Matomo (&lt;a href="https://matomo.org/">https://matomo.org/&lt;/a>) steht nicht für ein Mozarella-Sandwich mit Mayonaise und Tomaten, sondern ist ein Open Source Tool mit dem sich gleiches und teilweise sogar mehr erreichen lässt. In diesem Artikel gehe ich auf die Vorteile bei der Nutzung von Matomo ein und liefere auch gleich ein Beispiel, wie es sich schnell nutzen lässt.&lt;/p></description></item><item><title>Mythos Motivation ***</title><link>https://niklas-stephan.de/blog/mythos-motivation/</link><pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/mythos-motivation/</guid><description>&lt;p>Du denkst ein Mitarbeiter muss nur „richtig motiviert“ werden um dauerhaft Höchstleistungen zu erbringen? Dann lies dieses Buch um zu verstehen, warum diese Vorstellung weit ab jeglicher Realität liegt. Reinhard Sprenger stellt in vielen Beispielen und Fällen mit Praxisbezug dar, warum motivierte Mitarbeiter nicht einfach gezüchtet werden können. Als das Buch 1991 erschien, muss es wohl dem ein oder anderen Manager ganz neue Erkenntnisse geliefert haben. Auch heute, oder vielleicht gerade heute, ist das Thema aktuell und der Mythos noch nicht ist der Welt geschafft. Einige der Beispiele passen nur nicht mehr so recht in die heutige Welt und insgesamt kam mir das Buch etwas zu langatmig vor.&lt;/p></description></item><item><title>Der dunkle Schirm ****</title><link>https://niklas-stephan.de/blog/a-scanner-darkly/</link><pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/a-scanner-darkly/</guid><description>&lt;p>Wie bei vielen der Bücher von Philip K. Dick ist den meisten die spätere Verfilmung &amp;ldquo;A Scanner Darkly&amp;rdquo; eher ein Begriff. Aber auch Kenner des Films können Freude am Buch haben, da es viele Szenen enthält die so im Film nicht vorkommen und den Charakter der einzelnen Akteure tiefer verdeutlichen. Insgesamt handelt es sich um eine sehr düstere Geschichte in einer Welt in der der Unterschied zwischen legalen, illegalen Drogen und der Welt dazwischen zu einer bis auf die Wurzeln gespalteten Gesellschaft geführt hat. Es wird behauptet das Dick während des schreibens selbst in größeren Mengen mit Drogen &amp;ldquo;experimentiert&amp;rdquo; hat, auf jeden Fall kommt beim Lesen nie wirklich gute Laune auf, sondern eher Mitleid für die Protagonisten.&lt;/p></description></item><item><title>Visual Studio Code im Webinterface mit Docker und Caddy</title><link>https://niklas-stephan.de/blog/vscode-web/</link><pubDate>Sun, 12 May 2024 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/vscode-web/</guid><description>&lt;p>Microsofts &lt;a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code&lt;/a> hat sich über die letzten Jahre als Quasi-Standard,
+nicht nur für das editieren von Quellcode in allen möglichen (Programmier-)Sprachen,
+sondern auch für eine Vielzahl weiterer Operationen etabliert.&lt;/p>
+&lt;p>Einer der Kritikpunkte bleibt die durch den Editor verursachte realtiv hohe Systemlast,
+die zwar begründet ist aber für einen „Texteditor“ doch etwas merkwüdig erschenint.
+Ein anderer Kritikpunkt ist, dass für das beliebte „Remote SSH“ Plugin,
+welches es ermöglicht auf einen beliebigen über SSH erreichbaren Server mit VS Code zu arbeiten,
+ziemlich viele dynamische Ports geöffnet werden und auch generell einige Firewalls hier Probleme machen können.&lt;/p></description></item><item><title>Setup your own ChatGPT clone in 5 minutes</title><link>https://niklas-stephan.de/blog/chatgpt-clone/</link><pubDate>Sun, 28 Apr 2024 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/chatgpt-clone/</guid><description>&lt;p>And another post about A.I… And why this headline? &lt;a href="https://chat.openai.com/" target="_blank">OpenAI’s ChatGPT&lt;/a>,
+&lt;a href="https://copilot.microsoft.com/" target="_blank">Microsoft’s Co-Pilot&lt;/a> and &lt;a href="https://www.salesforce.com/news/press-releases/2023/03/07/einstein-generative-ai/" target="_blank">Salesforce’s Einstein&lt;/a> are just running well! But,
+are they? And even if you are happy about them, are you willing to pay regular
+(not cheap) license fees for all of your employees, even if they just use it
+from time to time? Also, do you really trust Big Tech’s promises about confidentiallity,
+when it’s about your intellectual property? If you answer all of this by yes,
+you can stop reading, now.
+But, in case you would like to know how you easily can run your own A.I. chatbot
+or you are just curious like me, about how that is done, my article gives you an
+overview how to do that by utilizing the two amazing tools &lt;a href="https://ollama.com/" target="_blank">Ollama&lt;/a> and &lt;a href="https://openwebui.com/" target="_blank">Open WebUI&lt;/a>.&lt;/p></description></item><item><title>My website charged with Aritificial Intelligence</title><link>https://niklas-stephan.de/blog/ai-on-website/</link><pubDate>Sat, 06 Apr 2024 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/ai-on-website/</guid><description>&lt;p>After years of tinkering with various CMS systems and even creating one of my own,
+one thing remains constant: the struggle to craft captivating content! ⏳ But fear not,
+because I’m tapping into the newest technology – AI! ?
+Check out my latest post on how artificial intelligence maybe can revolutionize content creation,
+translations, and even programming. Dive into the cutting-edge with me at &lt;a href="https://niklas-stephan.de" target="_blank">niklas-stephan.de &lt;/a>!
+#AI #ContentCreation #Innovation“&lt;/p>
+&lt;h2 id="user-experience">User Experience&lt;/h2>
+&lt;p>&lt;img src="02_niklas-stephan.deBrandbyDesigner.png" alt="Brand Proposal">&lt;/p></description></item><item><title>Caddy als Reverse Proxy für Docker Compose Container</title><link>https://niklas-stephan.de/blog/caddy-docker/</link><pubDate>Tue, 12 Mar 2024 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/caddy-docker/</guid><description>&lt;p>Heute beschreibe ich was ein Reverse Proxy ist und warum er in deiner Docker Landschaft nicht fehlen darf.
+Nachdem ich mehrere Jahre lang sowohl Traefik,
+als auch den Nginx Proxy Manager als Reverse Proxy für meine Docker Container
+genutzt habe, bin ich nun bei Caddy gelandet. Am Nginx Proxy Manager störte mich,
+dass zur Konfiguration ausschließlich die Web UI zur Verfügung steht.
+Das hat mich in Backup/Restore Szenarien öfter an die Grenzen gebracht,
+was zum Schluss dazu führte jedes Mal aufs neue eine Klickorgie zu veranstalten.
+An Traefik störte mich wiederum die aufgeblähte Konfiguration,
+sowie die vielen Labels die an jedem zu berücksichtigenden Container ergänzt
+werden müssen. Caddy bietet mit einer CLI und einer API,
+die gewünschte Flexibilität und lässt sich auch einfach sichern/wiederherstellen.&lt;/p></description></item><item><title>Passwordless SSH Login to a Remote Server with Visual Studio Code</title><link>https://niklas-stephan.de/blog/ssh-copy-id/</link><pubDate>Thu, 08 Feb 2024 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/ssh-copy-id/</guid><description>&lt;p>Following article describes how to enable You to login to a Remote Server with the industry standard
+SSH network protocol by using a key and Visual Studio Code, so you do not have to enter your user/password every
+time you want to connect. It was written for/on MacOS, but the procedure should be the same on Linux and similar for Windows.&lt;/p>
+&lt;h2 id="preparation">Preparation&lt;/h2>
+&lt;p>At first &lt;a href="https://code.visualstudio.com/" target="_blank">download&lt;/a>, install and open VS Code.&lt;/p>
+&lt;p>&lt;img src="02_grafik.png" alt="Remote SSH">&lt;/p></description></item><item><title>Learn Next.js - Chapter 18: Docker Environment</title><link>https://niklas-stephan.de/blog/next-js-18/</link><pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/next-js-18/</guid><description>&lt;p>If you went successfully through Vercel&amp;rsquo;s free and amazing &lt;a href="https://nextjs.org/learn/dashboard-app" target="_blank">Learn Next.js&lt;/a> online course,
+you have end up in a nice and &amp;ldquo;fast&amp;rdquo; (the database access is actually slow,
+but that was on purpose for better understanding of the tutorial) Demo of a
+modern web application. You have also learned about plenty considerations
+when developing an web app. So now, you maybe feel like &amp;ldquo;How can I use all of this
+for a real project?&amp;rdquo;. Also there are still some constraints left like;
+&amp;ldquo;How can I get independent from Vercel&amp;rsquo;s nice but (in their free plan) slow hosting offer?&amp;rdquo;.&lt;/p></description></item><item><title>Mindset *****</title><link>https://niklas-stephan.de/blog/mindset/</link><pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/mindset/</guid><description>&lt;p>Du denkst du bist immer offen gegenüber allem und jedem und auch so total „open-minded“?
+Das dachte ich auch und dann las ich dieses Buch. Dr. Carol Dweck gelingt es auf weniger als 300 Seiten,
+uns selbst soweit zu entlarven dass man erkennt, dass man vielleicht in einigen oder sogar vielen Disziplinen
+ein wirklich offener Mensch, aber in anderen Bereichen genau in das Gegenteil verfallen ist.&lt;/p>
+&lt;p>Schöne Beispiele aus Dr. Dwecks privaten Leben und beruflichen Laufbahn veranschaulichen wie uns die Macht der gewohnheit,
+Erziehung und das Leben selbst in vielen Lagen zu Gewohnheitstieren gemacht hat.
+Erfreulicherweise liefert sie auch gleich Methoden und Möglichkeiten aus diesem
+Hamsterrad in unserem Verstand zu entkommen.&lt;/p></description></item><item><title>Docker Engine auf einem Linux Server installieren</title><link>https://niklas-stephan.de/blog/install-docker-engine/</link><pubDate>Thu, 12 Oct 2023 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/install-docker-engine/</guid><description>&lt;p>Docker hilft uns durch sogenannte Container dabei die technische Serverinfrastruktur,
+die für verschiedenste Projekte benötigt wird, schnell und vom Basissystem isoliert aufzusetzen.
+Außerdem veringern wir durch den Einsatz von Docker den Wartungsaufwand
+z.B. für Systemaktualsierungen und Backups. Tausende von Projekten stehen vorgefertigt zur Verfügung,
+die mit einem einfachen Kommando nur gestartet werden können. In diesem Artikel beschreibe
+ich wie Docker und das zusätzlich hilfreiche Docker Compose installiert werden. Docker Compose
+hilft uns dabei ganze Containerlandschaften zur orchestrieren. Ein Beispiel:
+Bei der Installation von WordPress über Docker werden mehrere Container benötigt,
+einer für die App und einer für die Datenbank. Wenn wir diese nun alle einzeln starten und evtl.
+dabei noch bestimmte Parameter übergeben wollen, wird es schnell uünbersichtlich.
+Mit Compose können wir alle benötigten Parameter und Container in einer strukturierten
+Datei zusammenfassen und diese Umgebung mit einfachen Befehlen steuern.&lt;/p></description></item><item><title>Passwort vergessen in Windows 10? (Fast) kein Problem!</title><link>https://niklas-stephan.de/blog/windows10-password-reset/</link><pubDate>Mon, 11 Sep 2023 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/windows10-password-reset/</guid><description>&lt;p>In einer besonders unglücklichen Situation bin ich kürzlich von einem Freund kontaktiert worden:
+Er hat sein Windows 10 Anmeldepasswort unwiederbringlich vergessen.
+Also auf zu Google und siehe da; es gibt unzählige Lösungsvorschläge um ein Win10 Passwort zurückzusetzen.
+Dann aber die Ernüchterung: Microsoft hat schon nachgebessert und alle Tricks, die ich gefunden habe,
+funktionieren leider nicht mehr. Was nun?&lt;/p>
+&lt;p>Zeit für Eigeninitative 🙂 In dieser Anleitung beschreibe ich in Kürze, wie man ein Administratorkonto,
+auch in der aktuellsten Windows 10 Version, zurücksetzen kann.&lt;/p></description></item><item><title>Feste IP-Adressen mit Docker Compose</title><link>https://niklas-stephan.de/blog/docker-fixed-ips/</link><pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/docker-fixed-ips/</guid><description>&lt;p>Warum um Himmels willen sollte man Containern feste IP-Adresse zuweisen?
+Eine absolut berechtigte Frage auf die die Antwort lautet: Am besten nie!
+Denn: Docker kommt mit einer Art eingebauten DNS- und DHCP-Server und verwaltet die IP-Adresse
+wunderbar selbst. Leider gibt es trotzdem Spezialfälle in denen man sich das Leben vereinfachen kann,
+wenn man IPs händisch setzt.
+So ein Spezialfall wäre z.B. gegeben, wenn die Applikation die in einem Container betrieben wird
+nicht mit Hostnamen sondern nur mit IP-Adressen umgehen kann, um auf einen weiteren Container zuzugreifen.&lt;/p></description></item><item><title>Redis Objekt- und Caddy Seitencache für WordPress unter Docker einrichten</title><link>https://niklas-stephan.de/blog/wordpress-caches/</link><pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/wordpress-caches/</guid><description>&lt;p>WordPress ist nicht gerade berühmt dafür, besonders schnell zu sein.
+Es bemühen sich daraus reultierend unzählige Plugins auf dem WordPress Marktplatz,
+mit dem versprechen daran etwas zu ändern, darum die Gunst des Administrators zu gewinnen.
+Oft, vielleicht sogar meistens, können diese Plugins ihr versprechen nicht halten oder reißen
+sogar neue Sicherheitslücken im System auf. Vom nichts tun wird die Leistung aber auch nicht besser,
+weshalb dieser Artikel beschreibt wie man die Performance durch einen Seitencache und einen Objektcache
+steigern kann, ohne die Sicherheit des Systems aufs Spiel zu setzen.&lt;/p></description></item><item><title>Buddhismus für Praktiker von Volker Zotz *****</title><link>https://niklas-stephan.de/blog/buddhismus-fuer-praktiker/</link><pubDate>Sat, 03 Jun 2023 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/buddhismus-fuer-praktiker/</guid><description>&lt;p>Das Wort Buddha kommt im Buch nur genau 3mal vor, das Cover eingeschlossen.
+Auch sonst hält der Österreicher Volker Zotz im 1999 zum ersten Mal erschienen Buch
+„Mit Buddha das Leben meistern“ Abstand von Esotherik und Mystifizierung,
+gibt aber eine gelungene kurze und prägnante Zusammenfassung der Leitmotive
+des klassischen Buddhismus.&lt;/p>
+&lt;p>Meine Bewertung: 5 von 5 Sternen&lt;/p>
+&lt;h2 id="inhalt">Inhalt&lt;/h2>
+&lt;p>Nach dem ersten viertel des Buches, welches den Lebensweg von Gautamas und seiner Begleiter skiziert geht es im wesentlichen um Übungen die in die Tat umgesetzt werden wollen, sowie um philosphische Grundsätze an denen sich kein Übel identifizieren lässt.&lt;/p></description></item><item><title>Die Farben der Magie ***</title><link>https://niklas-stephan.de/blog/colors-of-magic/</link><pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/colors-of-magic/</guid><description>&lt;p>Im ersten Band der Scheibenwelt-Reihe wird auf humorvolle Art liebevoll die Geschichte
+von Rincewind, einem Zauberer ohne abgeschlossenes Zauberstudium, Zweiblum,
+dem ersten Touristen, und anderen Weggefährten erzählt.
+Alle ernsthaftig aus anderen Vertretern des Genres wie dem Herr der Ringe
+oder dem Lied von Eis und Feuer fehlt dem Buch, was grundsätzlich nicht slecht sein soll.
+Die Art des Humors erinnert mich ein wenig an &amp;ldquo;Per Anhalter durch die Galaxie&amp;rdquo;,
+leider bin ich aber schon zu alt geworden oder die Witze sind nicht ganz
+so gelungen wie in eben diesem. Wer eine leichte Lektüre mit viel Phantasie und
+Witz sucht ist mit dem Titel trotzdem gut beraten.&lt;/p></description></item><item><title>Deine eigene Suchmaschine mit SearXNG</title><link>https://niklas-stephan.de/blog/searxng/</link><pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/searxng/</guid><description>&lt;p>Wir alle wissen um die Macht des Konzerns Alphabet, der hinter der Google Suchmaschine steht:
+Wir suchen eine bestimmte Information im Internet und ein
+Algorithmus entscheidet intransparent für uns,
+welche Ergebnisse uns präsentiert werden. Natürlich könnte man auf eine andere
+Suchmaschine ausweichen, aber Google ist doch so schön bequem…&lt;/p>
+&lt;p>In diesem Artikel beschreibe ich, wie man sich mit SearXNG selbst eine
+(Meta-)Suchmaschine aufsetzen kann um dem Dilemma zumindest ein Stück weit zu entkommen.&lt;/p></description></item><item><title>Noch ein Web Content Management System?! Ich stelle vor: nCMS</title><link>https://niklas-stephan.de/blog/ncms/</link><pubDate>Sun, 05 Mar 2023 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/ncms/</guid><description>&lt;p>Warum sollte man sein eigenes Web Content Management System (WCMS) erstellen wollen, es gibt doch schon hunderte?!
+Völlig korrekt und es gibt auch keinen wirklichen Grund so etwas zeitintensives zu tun,
+außer natürlich man ist mit dem was es gibt nicht so richtig zufrieden und/oder möchte
+einfach selber wissen und ausprobieren wie man so etwas angehen kann.
+Genau mit dieser Motivation, und der ursprünglichen Intention für meine persönliche
+Website ein neues Layout zu entwickeln, habe ich mir innerhalb eines Monats ein eigenes WCMS erstellt:
+nCMS – “niklas stephan’s Content Management System” oder auch “node-red Content Management System”
+oder “not another Content Management System”!&lt;/p></description></item><item><title>IR-Remote Control 4.0 – Alles ins IoT!</title><link>https://niklas-stephan.de/blog/ir-remote/</link><pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/ir-remote/</guid><description>&lt;p>Universalfernbedienung? Mehr 90er geht es ja nicht! Was aber wenn die alte Infrarot Fernbedienung
+alle Lichter im Raum ein- und ausschalten, die Heizung oder Rollos bedienen und das
+Heimkino gleichzeitig steuern kann? Dieser Beitrag hat es in sich, denn auf diese Art lässt sich
+jedes irgendwie auslesbare/anbindbare Gerät in euer Alexa, HomeKit oder nahezu jede andere Smart
+Home Lösung integrieren! Das alles ohne Abos, versteckte Kosten und auf Wunsch auch ganz ohne die
+Cloud irgendeines großen Konzerns.&lt;/p></description></item><item><title>Rechenkraft für die Wissenschaft mit BOINC</title><link>https://niklas-stephan.de/blog/boinc/</link><pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/boinc/</guid><description>&lt;p>Wenn man sich zum Einem für wissenschaftliche Projekte begeistern kann und zum Anderen
+ein wenig Rechenleistung übrig hat, dann sollte man sich das Open Source Projekt und Werkzeug
+Boinc einmal genauer anschauen. In diesem Artikel berichte ich darüber, was Boinc eigentlich
+ist und wie man es einfach installieren kann.&lt;/p>
+&lt;h2 id="volunteer-computing--ehrenamtliches-rechnen">Volunteer-Computing / Ehrenamtliches Rechnen?&lt;/h2>
+&lt;blockquote>
+ &lt;p>Volunteer-Computing (zu deutsch: ehrenamtliches / freiwilliges Rechnen) beschreibt eine Technik 
+ der Anwendungsprogrammierung bei der einzelne Computernutzer Rechnerkapazitäten wie Rechenzeit 
+ und Speicherplatz auf freiwilliger Basis einem bestimmten Projekt zur Verfügung stellen, 
+ um unter Anwendung des verteilten Rechnens ein gemeinsames Ergebnis zu berechnen.&lt;/p></description></item><item><title>Headless CMS, APIs und IoT für die Website</title><link>https://niklas-stephan.de/blog/headless-cms-2022/</link><pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/headless-cms-2022/</guid><description>&lt;p>Wie im Artikel “Die (beinahe) perfekte Website – Teil 1: Anforderungen” bereits angerissen, kommen bei Gestaltung und Umsetzung eines modernen Internetauftritts eine Vielzahl von Faktoren zusammen. Für alle denen eine einfache WordPress Installation nicht reicht, oder für die die möglichen Alternativen kennen lernen möchten, stelle ich in diesem Post meine Umsetzung mit Hilfe der Tools Cockpit, Node-RED und weiteren Helferlein vor.&lt;/p>
+&lt;h2 id="was-ist-das-ziel">Was ist das Ziel?&lt;/h2>
+&lt;p>Ich wollte erreichen dass meine Seite(n) beim Besucher weit unterhalb von 2 Sekunden geladen werden und dort hübsch und zeitgemäß dargestellt werden. Außerdem wollte ich dazu moderne Techniken und Tools verwenden. Soviel vorab: das Meiste davon ist mir gelungen :-). Bei der Auswahl der Tools habe ich größtenteils mir vertraute Lösungen genommen, mit dem headless CMS Cockpit aber auch etwas Neues ausprobiert. Aber der Reihe nach.&lt;/p></description></item><item><title>Die (beinahe) perfekte Website - Anforderungen</title><link>https://niklas-stephan.de/blog/perfect-website-2022/</link><pubDate>Sun, 03 Jul 2022 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/perfect-website-2022/</guid><description>&lt;p>Willkommen zum ersten, wirklich langen Beitrag meiner Website, in dem ich darauf eingehe, was alles erforderlich ist um einen Internetauftritt besonders gut zu gestalten. Um zu beweisen, dass die gestellten Anforderungen auch erfüllt werden können, nutzen wir meine Domain niklas-stephan.de um das Gelernte, soweit möglich, auch gleich direkt umzusetzen.&lt;/p>
+&lt;h2 id="was-ist-perfekt">Was ist perfekt?&lt;/h2>
+&lt;p>Was ist schon perfekt und wer definiert das? Im Falle eines Internetauftritts ist diese Frage vielleicht einfacher zu beantworten als in anderen Fällen. Denn, egal wie gut Gestaltung und Umsetzung gelungen sind, muss die Seite erst einmal von einem Besucher gefunden werden. Mit einem Markanteil von über 90% (&lt;a href="https://blog.hubspot.de/marketing/google-trends-suche">https://blog.hubspot.de/marketing/google-trends-suche&lt;/a>) ist da die Google Suchmaschine eigentlich der einzige ausschlaggebende Faktor. Als Schlussfolgerung kann mann also sagen, dass die Optimierung einer Website auf von Google definierte Faktoren gleichzeitig nah an eine perfekte Website führt. Welche Faktoren das sind und welche Weiteren noch eine wichtige Rolle spielen, sehen wir uns nun im ersten Teil unserer Artikelserie an.&lt;/p></description></item><item><title>Reanimation: Auf MacOS mit 3 Fingern Fenster schieben</title><link>https://niklas-stephan.de/blog/move-3-trackpad/</link><pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/move-3-trackpad/</guid><description>&lt;p>Aus einem mir nicht erklärlichen Grund, ist auf dem Mac seit geraumer Zeit das verschieben von Fenstern und Objekten mittels 3-Finger-Geste nicht mehr im Standard aktiviert. Das scheint nicht nicht nur mich gestört zu haben, da Apple einen relativ frisch aktualiserten Artikel zur Wiederherstellung dieses Verhaltens bereit stellt. Inhalt siehe hier:&lt;/p>
+&lt;h2 id="anleitung">Anleitung&lt;/h2>
+&lt;ol>
+&lt;li>Wähle das Apple-Menü () &amp;gt; „Systemeinstellungen“.&lt;/li>
+&lt;li>Klicke auf „Bedienungshilfen“.&lt;/li>
+&lt;li>Klicke auf „Zeigersteuerung“ oder „Maus &amp;amp; Trackpad“.&lt;/li>
+&lt;li>Klicke auf die Taste „Trackpad-Optionen“.&lt;/li>
+&lt;li>Aktiviere die Option „Trackpad zum Ziehen verwenden“ oder „Bewegen aktivieren“.&lt;/li>
+&lt;li>Wähle im Einblendmenü für den Zugstil die Option „Mit drei Fingern bewegen“ aus.&lt;/li>
+&lt;li>Klicke auf „OK“.&lt;/li>
+&lt;/ol></description></item><item><title>Vier Jahreszeiten im Kasseler Bergpark</title><link>https://niklas-stephan.de/blog/ks-four-seasons/</link><pubDate>Sun, 02 Jan 2022 00:00:00 +0000</pubDate><guid>https://niklas-stephan.de/blog/ks-four-seasons/</guid><description>&lt;p>Seit nun über einem Jahr leben wir mit dem Kasseler Bergpark direkt nebenan. In diesem Beitrag möchte ich gerne die Impressionen und Sehenswürdigkeiten, die sich im Lauf der Jahreszeiten bieten, teilen.&lt;/p>
+&lt;p>Das im Artikel beschriebene Gebiet bezieht sich auf ein größeres Areal im äußeren Westen Kassels, welches sich, auch wenn man alle Highlights sehen möchte, gut in einem oder zwei Tagesausflügen fußläufig erkunden lässt. Eine Übersicht über das Gebiet lässt sich hier finden: Link zu OpenStreetMap.&lt;/p></description></item></channel></rss>
