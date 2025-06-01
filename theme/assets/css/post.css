@@ -23,11 +23,3 @@
     margin-left: 8px;
     background-color: var(--color-secondary);
 }
-
-.giscus {
-    background-color: var(--color-light);
-    margin-top: 16px;
-    margin-bottom: 16px;
-    padding: 8px;
-    border-radius: 12px;
-}

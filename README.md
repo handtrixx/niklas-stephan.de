@@ -1,5 +1,6 @@
 # niklas-stephan.de
 ![Logo](/theme/static/images/hero.webp)
+
 Sources for the niklas-stephan.de website project. Feel free to copy or fork it to adopt it for your needs.
 
 ## Project Overview
