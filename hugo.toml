@@ -74,7 +74,14 @@ source = "hugo_stats.json"
 target = "assets/watching/hugo_stats.json"
 
 [outputs]
-home = ["HTML", "JSON"]
+home = ["HTML", "JSON", "robots"]
+
+[outputFormats]
+  [outputFormats.robots]
+    mediaType = "text/plain"
+    baseName = "robots"
+    isPlainText = true
+    notAlternative = true
 
 [build]
 [build.buildStats]

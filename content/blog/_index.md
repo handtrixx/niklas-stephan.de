@@ -3,4 +3,4 @@ title = 'Blog'
 slug = 'blog'
 +++
 
-This is the Blog page.
+Mein Blog über verschiedene Themen wie Webentwicklung, Technologie, Bücker und persönliche Projekte
