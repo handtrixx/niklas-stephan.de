@@ -3,7 +3,6 @@
 
 {{ $combinedJS := slice $js1 $js2 | resources.Concat "js/scripts.js" }}
 {{ $combinedJS = $combinedJS | minify }}
-{{ $giscusTheme := "preferred_color_scheme" }}
 {{ if hugo.IsProduction }}
     {{ $giscusTheme = printf "%scss/giscuss.css" .Site.BaseURL }}
     {{ $combinedJS = $combinedJS | fingerprint | resources.PostProcess }}
@@ -37,7 +36,6 @@
         crossorigin="anonymous"
         async>
 </script>
-
 
 
 {{ end }}
