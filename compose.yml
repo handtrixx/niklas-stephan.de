@@ -7,11 +7,9 @@ services:
     volumes:
       - ./content:/hugo/content
       - ./theme:/hugo/themes/theme
-      - ./build:/hugo/build
       - ./dist:/hugo/dist
       - ./hugo.toml:/hugo/hugo.toml
     environment:
       - URL=https://niklas-stephan.de
-      - REPO=https://github.com/handtrixx/niklas-stephan.de.git
     ports:
       - "1313:1313"
