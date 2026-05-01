@@ -8,12 +8,12 @@ services:
         #-linux/arm64
     env_file:
       - .env
-    volumes:
-      - ./scripts:/scripts
-      - ./json:/json
-      - ./log:/log
-      - ./hugo:/hugo
-      - ./content:/content
-      - ./public:/public
+    #volumes:
+    #  - ./scripts:/scripts
+    #  - ./json:/json
+    #  - ./log:/log
+    #  - ./hugo:/hugo
+    #  - ./content:/content
+    #  - ./public:/public
     ports:
       - "80:80"

@@ -14,11 +14,13 @@ RUN mkdir -p /home/appuser \
     && mkdir -p /json \
     && mkdir -p /log \
     && mkdir -p /public \
+    && mkdir -p /content \
     && mkdir -p /hugo \
     && mkdir -p /scripts \
     && chown -R appuser:appuser \
     /hugo \
     /scripts \
+    /content \
     /public \
     /json \
     /log \
