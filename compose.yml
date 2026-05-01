@@ -1,0 +1,19 @@
+services:
+  web:
+    image: ghcr.io/handtrixx/niklas-stephan.de:latest
+    build:
+      context: .
+      platforms:
+        - linux/amd64
+        #-linux/arm64
+    env_file:
+      - .env
+    volumes:
+      - ./scripts:/scripts
+      - ./json:/json
+      - ./log:/log
+      - ./hugo:/hugo
+      - ./content:/content
+      - ./public:/public
+    ports:
+      - "80:80"

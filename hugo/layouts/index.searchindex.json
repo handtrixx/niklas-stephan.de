@@ -1,0 +1,15 @@
+{{- $index := slice -}}
+{{- range .Site.Pages -}}
+  {{- if and (not .IsHome) (or (not .IsSection) .Content) -}}
+    {{- $entry := dict
+      "title"    .Title
+      "url"      .RelPermalink
+      "content"  (.Plain | truncate 5000)
+      "section"  .Section
+      "language" .Params.language
+      "icon"     .Params.icon
+    -}}
+    {{- $index = $index | append $entry -}}
+  {{- end -}}
+{{- end -}}
+{{- $index | jsonify -}}

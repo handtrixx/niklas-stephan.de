@@ -1,0 +1,110 @@
+<footer>
+    <hr class="mt-5 mb-5" />
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-3">
+                <a href="/" aria-label="Link to Homepage" class="center">
+                    <img
+                        src="/assets/img/favicon.png"
+                        width="48"
+                        height="48"
+                        alt="Favicon"
+                    />
+                </a>
+                <p class="small mt-2">
+                    Designed and built with all the
+                    <svg>
+                        <use href="#favorite" />
+                    </svg>
+                    in the world by Niklas Stephan and the help of amazing Open
+                    Source Tools.
+                </p>
+            </div>
+            <div class="col-12 col-md-3"></div>
+            <div class="col-6 col-md-3">
+                <p class="bold">Social</p>
+                <p>
+                    <a
+                        href="https://linkedin.com/in/niklas-stephan/"
+                        target="_blank"
+                        aria-label="Link to LinkedIn"
+                    >
+                        <svg>
+                            <use href="#linked_in" />
+                        </svg>
+                        &nbsp;linked.in
+                    </a>
+                </p>
+                <p>
+                    <a
+                        href="https://github.com/handtrixx"
+                        target="_blank"
+                        aria-label="Link to GitHub"
+                    >
+                        <svg>
+                            <use href="#github" />
+                        </svg>
+                        &nbsp;GitHub
+                    </a>
+                </p>
+                <p>
+                    <a
+                        href="mailto:mail@niklas-stephan.de"
+                        target="_blank"
+                        class=""
+                        aria-label="Link to Mail"
+                    >
+                        <svg>
+                            <use href="#mail" /></svg
+                        >&nbsp;Mail
+                    </a>
+                </p>
+            </div>
+            <div class="col-6 col-md-3">
+                <p class="bold">Content</p>
+                <p><a href="/" class="link">Home</a></p>
+                <p><a href="/about/" class="link">About</a></p>
+                <p><a href="/wiki/" class="link">Wiki</a></p>
+                <p><a href="/blog/" class="link">Blog</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-4">
+                <p class="large-text">2026, Niklas Stephan</p>
+            </div>
+            <div class="col-4">
+                <a class="large-text" href="/privacy/">Privacy Policy</a>
+            </div>
+            <div class="col-4">
+                <a class="large-text" href="/imprint/">Imprint</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Matomo Image Tracker-->
+<img
+    referrerpolicy="no-referrer-when-downgrade"
+    src="https://stats.handtrixxx.com/matomo.php?idsite=1&amp;rec=1"
+    style="border: 0"
+    alt=""
+    loading="eager"
+    fetchpriority="low"
+/>
+<!-- End Matomo -->
+{{ $tabs := resources.Get "js/tabs.js" }}
+{{ $wikinav := resources.Get "js/fab.js" }}
+{{ $codeblocks := resources.Get "js/codeblocks.js" }}
+{{ $toc := resources.Get "js/toc.js" }}
+{{ $search := resources.Get "js/search.js" }}
+{{ $js := slice $tabs $wikinav $codeblocks $toc $search | resources.Concat "js/bundle.js" }}
+{{ $js = $js | minify | fingerprint }}
+
+<script src="/assets/js/fuse.min.js" defer></script>
+<script
+    src="{{ $js.RelPermalink }}"
+    integrity="{{ $js.Data.Integrity }}"
+    defer
+></script>

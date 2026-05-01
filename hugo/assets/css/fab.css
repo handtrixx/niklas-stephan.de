@@ -1,0 +1,40 @@
+.fab {
+    display: flex;
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    height: 64px;
+    width: 64px;
+    z-index: 3;
+}
+
+@media (min-width: 1200px) {
+    .fab {
+        display: none !important;
+    }
+}
+
+.fabbtn {
+    height: 64px;
+    width: 64px;
+    padding: 0;
+}
+
+.fabbtn svg {
+    fill: var(--on-primary);
+    height: 32px;
+    width: 32px;
+}
+
+.wiki-mega-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100vh;
+    max-width: 380px;
+    background: color-mix(in srgb, var(--surface) 88%, transparent);
+    backdrop-filter: blur(16px);
+    box-shadow: var(--elevate);
+    border-radius: 12px;
+}

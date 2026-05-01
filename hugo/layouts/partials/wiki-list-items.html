@@ -1,0 +1,23 @@
+{{- define "wiki-list-items" -}}
+  {{- $section := .section -}}
+  {{- $depth := .depth -}}
+
+  {{- $children := union $section.Sections $section.Pages -}}
+  {{- $sorted := sort $children "Title" "asc" -}}
+
+  {{- range $sorted -}}
+    <article class="wiki-list-item depth-{{ $depth }}">
+      <h{{ add $depth 3 }}>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h{{ add $depth 3 }}>
+      {{- with .Summary -}}
+        <p class="wiki-summary">{{ . | plainify | truncate 120 }}</p>
+      {{- end -}}
+      {{- if .Sections -}}
+        {{- template "wiki-list-items" (dict "section" . "depth" (add $depth 1)) -}}
+      {{- end -}}
+    </article>
+  {{- end -}}
+{{- end -}}
+
+{{- template "wiki-list-items" (dict "section" . "depth" 0) -}}

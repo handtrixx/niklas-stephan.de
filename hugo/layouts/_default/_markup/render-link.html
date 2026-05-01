@@ -1,0 +1,21 @@
+{{- $href := .Destination -}}
+{{- if hasPrefix $href "/doc/" -}}
+  {{- $slug := strings.TrimPrefix "/doc/" $href | lower -}}
+  {{- $resolved := "" -}}
+  {{- range site.Pages -}}
+    {{- if strings.HasPrefix .RelPermalink "/wiki/" -}}
+      {{- $parts := split (strings.TrimRight .RelPermalink "/") "/" -}}
+      {{- $lastPart := index $parts (sub (len $parts) 1) -}}
+      {{- if strings.Contains $lastPart "hugo" -}}
+        {{- warnf "render-link: slug='%s' lastPart='%s' eq=%v permalink='%s'" $slug $lastPart (eq $lastPart $slug) .RelPermalink -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $isExternal := strings.HasPrefix $href "http" -}}
+<a href="{{ $href | safeURL }}"
+   {{- if $isExternal }} target="_blank" rel="noopener noreferrer"{{ end }}
+   {{- with .Title }} title="{{ . }}"{{ end -}}
+>
+  {{- .Text | safeHTML -}}
+</a>

@@ -1,0 +1,47 @@
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100% !important;
+    max-height: 600px;
+}
+
+svg {
+    --_size: 1rem;
+    font-family: var(--font-icon);
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--_size);
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+    inline-size: var(--_size);
+    min-inline-size: var(--_size);
+    block-size: var(--_size);
+    min-block-size: var(--_size);
+    box-sizing: content-box;
+    line-height: normal;
+    border-radius: 0;
+    fill: var(--on-background);
+}
+
+.blog-list-image img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    max-width: 100% !important;
+}
+
+.markimage {
+    margin: 12px;
+}

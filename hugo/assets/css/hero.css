@@ -1,0 +1,23 @@
+.hero-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (min-width: 800px) {
+    .hero-container {
+        min-height: 60vh;
+        align-items: center;
+        margin-top: 80px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .hero-container {
+        min-height: inherit;
+    }
+}
+
+.hero-image {
+    max-width: 400px;
+    height: auto;
+}

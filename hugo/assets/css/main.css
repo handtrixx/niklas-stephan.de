@@ -1,0 +1,174 @@
+:root {
+    --background: #191c1d;
+    --error: #ffb4ab;
+    --error-container: #93000a;
+    --inverse-on-surface: #2e3132;
+    --inverse-primary: #006874;
+    --inverse-surface: #e1e3e3;
+    --on-background: #e1e3e3;
+    --on-error: #690005;
+    --on-error-container: #ffb4ab;
+    --on-primary: #00363d;
+    --on-primary-container: #97f0ff;
+    --on-secondary: #1c3438;
+    --on-secondary-container: #cde7ec;
+    --on-surface: #e1e3e3;
+    --on-surface-variant: #bfc8ca;
+    --on-tertiary: #24304d;
+    --on-tertiary-container: #dae2ff;
+    --outline: #899294;
+    --outline-variant: #3f484a;
+    --primary: #4fd8eb;
+    --primary-container: #004f58;
+    --scrim: #000000;
+    --secondary: #b1cbd0;
+    --secondary-container: #334b4f;
+    --shadow: #000000;
+    --surface: #101415;
+    --surface-bright: #363a3a;
+    --surface-container: #1d2021;
+    --surface-container-high: #272b2b;
+    --surface-container-highest: #323536;
+    --surface-container-low: #191c1d;
+    --surface-container-lowest: #0b0f0f;
+    --surface-dim: #101415;
+    --surface-variant: #3f484a;
+    --tertiary: #bac6ea;
+    --tertiary-container: #3b4664;
+    --font-family: "Tahoma", sans-serif;
+    --font-size: 18px;
+    --blur: 1rem;
+    --elevate: 0 0.125rem 0.125rem 0 rgb(0 0 0 / 0.32);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+}
+
+body {
+    position: relative;
+    background-color: var(--surface);
+    color: var(--on-background);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -10%;
+    right: -10%;
+    height: 100%;
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(79, 216, 235, 0.12) 0%,
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(0, 79, 88, 0.18) 0%,
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 40% 20%,
+            rgba(186, 198, 234, 8%) 0%,
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(79, 216, 235, 8%) 0%,
+            rgba(0, 79, 88, 6%) 30%,
+            transparent 70%
+        );
+    pointer-events: none;
+    z-index: -1;
+    filter: blur(60px);
+    animation: gradient-float 20s ease-in-out infinite;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 2px,
+            rgba(79, 216, 235, 0.03) 2px,
+            rgba(79, 216, 235, 0.03) 4px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(79, 216, 235, 0.03) 2px,
+            rgba(79, 216, 235, 0.03) 4px
+        );
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.3;
+    mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
+}
+
+@keyframes gradient-float {
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -30px) scale(1.05);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.95);
+    }
+}
+
+article {
+    --_padding: 1rem;
+    box-shadow: var(--elevate1);
+    background-color: var(--surface-container-low);
+    color: var(--on-surface);
+    padding: var(--_padding);
+    border-radius: 0.75rem;
+    display: block;
+    transition:
+        transform var(--speed3),
+        border-radius var(--speed3),
+        padding var(--speed3);
+}
+
+.primary {
+    background-color: var(--primary) !important;
+    color: var(--on-primary) !important;
+}
+
+.secondary {
+    background-color: var(--secondary) !important;
+    color: var(--on-secondary) !important;
+}
+
+.primary-text {
+    color: var(--primary);
+}
+
+.secondary-text {
+    color: var(--secondary);
+}
+
+.small {
+    font-size: 0.875rem;
+}

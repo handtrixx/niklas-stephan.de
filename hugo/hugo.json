@@ -1,0 +1,59 @@
+{
+  "title": "niklas-stephan.de",
+  "enableRobotsTXT": true,
+  "params": {
+    "description": "Powered by Outline, Hugo and nginx",
+    "author": "Niklas Stephan"
+  },
+  "outputFormats": {
+    "SearchIndex": {
+      "mediaType": "application/json",
+      "baseName": "search-index",
+      "isPlainText": true,
+      "notAlternative": true
+    }
+  },
+  "outputs": {
+    "home": ["HTML", "RSS", "SearchIndex"],
+    "section": ["HTML", "RSS"],
+    "page": ["HTML"]
+  },
+  "markup": {
+    "tableOfContents": {
+      "startLevel": 2,
+      "endLevel": 4
+    },
+    "goldmark": {
+      "parser": {
+        "autoHeadingIDType": "github"
+      },
+      "extensions": {
+        "definitionList": true,
+        "table": true,
+        "footnote": true,
+        "linkify": true,
+        "strikeThrough": true,
+        "subscript": true,
+        "superscript": true,
+        "highlight": true,
+        "codeFence": true,
+        "image": true,
+        "link": true,
+        "email": true,
+        "math": true,
+        "taskList": true,
+        "typography": true,
+        "emoji": true
+      },
+      "renderer": {
+        "unsafe": true,
+        "hardWraps": true
+      }
+    }
+  },
+  "disableKinds": ["taxonomy", "term"],
+  "taxonomies": {
+    "category": "categories",
+    "tag": "tags"
+  }
+}

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+{{ range .Site.Pages }}
+{{- if .Params.private }}
+Disallow: {{ .RelPermalink }}
+{{- end }}
+{{- end }}
+
+Sitemap: {{ .Site.BaseURL }}sitemap.xml

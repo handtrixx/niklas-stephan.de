@@ -1,0 +1,81 @@
+{{ define "main" }}
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-xl-3 d-none d-xl-block">
+                <article
+                    id="wiki-nav"
+                    class="sticky side-nav-inner"
+                    aria-label="Wiki navigation"
+                >
+                    <a href="/wiki">
+                        <div>
+                            <h6>Navigation</h6>
+                        </div>
+                    </a>
+                    <nav id="WikiContent">
+                        {{ partial "wiki-nav.html" . }}
+                    </nav>
+                </article>
+            </div>
+            <div class="col-12 col-xl-9">
+                {{ if eq .RelPermalink "/wiki/" }}
+                <div class="text-center">
+                    <h1>
+                        Mein
+                        <span class="primary-text">Wiki</span>
+                    </h1>
+                    <p>Sharing Knowledge</p>
+                </div>
+                {{else}} {{ end }}
+                <article class="mt-4">
+                    <div class="search-wrapper" id="search-wrapper">
+                        <div class="search-input-row">
+                            <svg>
+                                <use href="#search" />
+                            </svg>
+                            <input
+                                class="search-input"
+                                id="search-input"
+                                type="search"
+                                placeholder="Seaching for something specific? Enter your query here"
+                                autocomplete="off"
+                            />
+                        </div>
+                        <ul class="search-results" id="search-results"></ul>
+                    </div>
+                </article>
+
+                {{ if .Content }}
+                <div class="mt-4 post-content">
+                    <article>
+                        <h1 class="mb-0">{{ .Title }}</h1>
+                        <div class="mb-3 secondary-text small">
+                            Veröffentlicht: {{ .Date.Format "02.01.2006" }}
+                            {{ if .Lastmod }} | Aktualisiert: {{ .Lastmod.Format "02.01.2006" }} {{ end }}
+                        </div>
+                        {{ .Content }}
+                    </article>
+                </div>
+                {{ end }}
+
+                {{ if .Pages }}
+                <div class="mt-2 post-content">
+                    <div class="mb-1">
+                        <h2>Unterseiten</h2>
+                    </div>
+                    {{ partial "wiki-list-items.html" . }}
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+    <div class="fab">
+        <button class="fabbtn" onclick="toggleWikinav()">
+            <svg>
+                <use href="#side_navigation" />
+            </svg>
+        </button>
+    </div>
+</main>
+{{ end }}

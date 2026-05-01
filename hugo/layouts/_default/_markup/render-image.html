@@ -1,0 +1,12 @@
+{{- $dest := .Destination -}}
+{{- $title := .Title -}}
+{{- $alt := .PlainText -}}
+{{- with $dest -}}
+<a href="{{ . | safeURL }}" target="_blank" rel="noopener noreferrer" class="markimage">
+  <img
+    src="{{ . | safeURL }}"
+    {{- with $alt }} alt="{{ . }}"{{ end }}
+    {{- with $title }} title="{{ . }}"{{ end }}
+  />
+</a>
+{{- end -}}

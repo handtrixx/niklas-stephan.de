@@ -1,0 +1,26 @@
+{
+  "name": "Niklas Stephan - Personal Website",
+  "short_name": "niklas-stephan.de",
+  "description": "Explore my website showcasing my projects, blog posts, a comprehensive Wiki, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#191c1d",
+  "theme_color": "#006874",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/img/favicon.png",
+      "sizes": "120x120",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["personal", "portfolio"],
+  "screenshots": [
+    {
+      "src": "/assets/img/web_screenshot.webp",
+      "sizes": "1280x720",
+      "type": "image/webp"
+    }
+  ]
+}

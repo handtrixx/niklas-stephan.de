@@ -1,0 +1,30 @@
+{{- define "wiki-nav-items" -}}
+  {{- $section := .section -}}
+  {{- $current := .current -}}
+
+  {{- $children := union $section.Sections $section.Pages -}}
+  {{- $sorted := sort $children "Title" "asc" -}}
+
+  <ul class="wiki-tree">
+    {{- range $sorted -}}
+      {{- $active := eq .RelPermalink $current.RelPermalink -}}
+      {{- $isAncestor := and (not $active) (hasPrefix $current.RelPermalink .RelPermalink) -}}
+      {{- $hasChildren := gt (len .Sections) 0 -}}
+      <li class="wiki-tree-item">
+        {{- if $hasChildren -}}
+          <details class="wiki-tree-group" {{ if or $active $isAncestor }}open{{ end }}>
+            <summary class="wiki-tree-summary">
+              <a href="{{ .RelPermalink }}" class="wiki-tree-link {{ if $active }}active{{ end }}">{{ .Title }}</a>
+            </summary>
+            {{- template "wiki-nav-items" (dict "section" . "current" $current) -}}
+          </details>
+        {{- else -}}
+          <a href="{{ .RelPermalink }}" class="wiki-tree-link {{ if $active }}active{{ end }}">{{ .Title }}</a>
+        {{- end -}}
+      </li>
+    {{- end -}}
+  </ul>
+{{- end -}}
+
+{{- $wikiRoot := site.GetPage "/wiki" -}}
+{{- template "wiki-nav-items" (dict "section" $wikiRoot "current" .Page) -}}

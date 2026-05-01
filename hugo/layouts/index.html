@@ -1,0 +1,86 @@
+{{ define "main" }}
+<main>
+    <div class="container hero-container">
+        <div class="row">
+            <div class="col-12 col-md-6 d-flex align-items-center">
+                <div class="d-block">
+                    <h1>
+                        Niklas
+                        <span class="primary-text">Stephan</span>
+                    </h1>
+                    <p>
+                        Explore my website showcasing my projects, blog posts, a
+                        comprehensive Wiki, and more.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <img
+                    src="/assets/img/hero.webp"
+                    alt="Niklas Stephan"
+                    class="hero-image"
+                />
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <nav class="tab mb-2">
+            <a href="#page-content" class="active">
+                <svg>
+                    <use href="#info" />
+                </svg>
+                <span>Content</span>
+            </a>
+            <a href="#page-specs">
+                <svg>
+                    <use href="#design_services" />
+                </svg>
+                <span>Readme.md</span>
+            </a>
+        </nav>
+        <article class="page active" id="page-content">
+            <div>
+                <h2 class="primary-text">Content</h2>
+                <p>
+                    Welcome to my website where you can explore my projects,
+                    blog posts, a comprehensive Wiki, and more.
+                </p>
+                <p>
+                    Beside this landing page in section "About Me" you can find
+                    my CV including sections for my career path, my eductional
+                    history, business projects I was involved in, as well as
+                    some Trivia about me.
+                </p>
+
+                    <div class="search-wrapper mt-4" id="search-wrapper">
+                        <div class="search-input-row">
+                            <svg>
+                                <use href="#search" />
+                            </svg>
+                            <input
+                                class="search-input"
+                                id="search-input"
+                                type="search"
+                                placeholder="Seaching for something specific? Enter your query here"
+                                autocomplete="off"
+                            />
+                        </div>
+                        <ul class="search-results" id="search-results"></ul>
+                    </div>
+
+            </div>
+        </article>
+        <article class="page" id="page-specs">
+            <div class="post-content">
+                {{ with site.GetPage "/readme" }}
+                    {{ .Content | safeHTML }}
+                {{ else }}
+                    <p>Specifications not found.</p>
+                {{ end }}
+            </div>
+        </article>
+    </div>
+</main>
+{{ end }}

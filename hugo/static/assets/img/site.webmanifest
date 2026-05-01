@@ -1,0 +1,54 @@
+{
+  "id": "/",
+  "name": "Niklas Stephan - Personal Website",
+  "short_name": "niklas-stephan.de",
+  "description": "Explore my website showcasing my projects, blog posts, a comprehensive Wiki, and more.",
+  "lang": "en",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#191c1d",
+  "theme_color": "#006a60",
+  "orientation": "any",
+  "categories": ["personal", "portfolio"],
+  "icons": [
+    {
+      "src": "/assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/img/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/img/web_screenshot.webp",
+      "sizes": "1280x720",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "Homepage of niklas-stephan.de"
+    }
+  ]
+}

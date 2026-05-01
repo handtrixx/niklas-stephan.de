@@ -1,0 +1,51 @@
+/* summary reset */
+.wiki-tree-summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 1rem;
+    min-height: 44px;
+}
+
+.wiki-tree-summary::-webkit-details-marker {
+    display: none;
+}
+
+.wiki-tree-summary::marker {
+    content: "";
+}
+
+/* arrow indicator */
+.wiki-tree-summary::before {
+    content: "";
+    flex: none;
+    align-self: center;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-right: 2px solid var(--on-surface-variant);
+    border-bottom: 2px solid var(--on-surface-variant);
+    transform: rotate(-45deg);
+    transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1);
+    opacity: 0.8;
+}
+
+.wiki-tree-group[open] > .wiki-tree-summary::before {
+    transform: rotate(45deg);
+}
+
+/* link inside summary fills remaining space */
+.wiki-tree-summary > .wiki-tree-link {
+    flex: 1;
+    padding-left: 0;
+    min-height: unset; /* let the summary control the row height */
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    line-height: 34px;
+}
+
+.wiki-list-item.depth-0 {
+    margin-bottom: 48px;
+}

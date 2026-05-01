@@ -1,0 +1,120 @@
+/* Mobile-first: Simple stacked layout for small screens */
+.timeline-item {
+    display: block;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline-date {
+    display: block;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.timeline-separator {
+    display: none;
+    /* Hide separator on mobile */
+}
+
+.timeline-content {
+    padding: 0;
+}
+
+/* Constrain progress bars within list items */
+
+.timeline-list {
+    list-style: none;
+}
+
+.timeline-list li {
+    display: flex;
+    align-items: center;
+}
+.timeline-list li span {
+    white-space: nowrap;
+    width: 180px;
+}
+
+/* Timeline layout for large screens (993px and above) */
+@media only screen and (min-width: 1092px) {
+    .timeline-item {
+        display: grid;
+        grid-template-columns: 1fr 60px 1fr;
+        gap: 16px;
+        position: relative;
+        margin-bottom: 0;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .timeline-item:nth-child(even) .timeline-date {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+        grid-column: 3;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-date {
+        grid-column: 1;
+        justify-content: end;
+    }
+
+    .timeline-separator {
+        display: flex;
+        /* Show separator on large screens */
+        grid-column: 2;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .timeline-connector {
+        width: 2px;
+        flex: 1;
+        background-color: var(--secondary);
+    }
+
+    .timeline-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--secondary);
+        margin: 4px 0;
+        flex-shrink: 0;
+    }
+
+    .timeline-date {
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+
+    .timeline-content {
+        padding: 12px 16px;
+    }
+
+    .timeline-item.no-date {
+        grid-template-columns: 60px 1fr;
+    }
+
+    .timeline-item.no-date .timeline-separator {
+        grid-column: 1;
+    }
+
+    .timeline-item.no-date .timeline-content {
+        grid-column: 2;
+    }
+
+    .timeline-list li span {
+        width: 200px;
+    }
+}

@@ -1,0 +1,47 @@
+.side-nav-inner {
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem;
+    background: color-mix(in srgb, var(--surface) 88%, transparent);
+    backdrop-filter: blur(16px);
+    box-shadow: var(--elevate);
+    overflow: hidden;
+}
+
+#TableOfContents ul,
+#WikiContent ul {
+    list-style: none;
+    padding-left: 0.75rem;
+    margin: 0;
+}
+
+#TableOfContents > ul,
+#WikiContent > ul {
+    padding-left: 0;
+}
+
+#TableOfContents a,
+#WikiContent a {
+    display: block;
+    padding: 0.2rem 0;
+    text-decoration: none;
+    color: inherit;
+}
+
+#TableOfContents a.active,
+#WikiContent a.active {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* Hide nested lists by default */
+#TableOfContents li > ul,
+#WikiContent li > ul {
+    display: none;
+}
+
+/* Show nested list when parent is open */
+#TableOfContents li.open > ul,
+#WikiContent li.open > ul {
+    display: block;
+}

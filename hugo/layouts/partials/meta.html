@@ -1,0 +1,91 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+{{/* ======================================================
+     CSS — concat, minify, fingerprint
+     ====================================================== */}}
+{{ $cssFiles := slice
+    "css/main.css"
+    "css/grid.css"
+    "css/utilities.css"
+    "css/typography.css"
+    "css/chip.css"
+    "css/hero.css"
+    "css/navbar.css"
+    "css/table.css"
+    "css/timeline.css"
+    "css/image.css"
+    "css/button.css"
+    "css/progress.css"
+    "css/content.css"
+    "css/sidenav.css"
+    "css/fab.css"
+    "css/wikinav.css"
+    "css/search.css"
+}}
+{{ $cssResources := slice }}
+{{ range $cssFiles }}
+    {{ $cssResources = $cssResources | append (resources.Get .) }}
+{{ end }}
+{{ $css := $cssResources | resources.Concat "css/styles.css" | minify | fingerprint }}
+<link
+    rel="preload"
+    as="style"
+    href="{{ $css.RelPermalink }}"
+/>
+<link
+    rel="stylesheet"
+    href="{{ $css.RelPermalink }}"
+    integrity="{{ $css.Data.Integrity }}"
+    crossorigin="anonymous"
+/>
+
+{{/* ======================================================
+     Favicon — one PNG, manifest handles the rest.
+     Ideally replace favicon.png with favicon.svg for
+     perfect scaling with zero extra requests.
+     ====================================================== */}}
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" />
+<link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+
+
+{{/* ======================================================
+     Canonical & Basic Meta
+     ====================================================== */}}
+<link rel="canonical" href="{{ .Permalink }}" />
+<title>{{ .Title }} on niklas-stephan.de</title>
+<meta name="description" content="{{ .Description }}" />
+<meta name="author" content="Niklas Stephan" />
+<meta name="google" content="notranslate" />
+
+{{/* ======================================================
+     Open Graph
+     og:type should be "article" for blog posts, else "website"
+     ====================================================== */}}
+{{ $ogImage := .Params.meta_image | default (printf "%sassets/img/web_screenshot.webp" .Site.BaseURL) }}
+{{ $ogType := "website" }}
+{{ if eq .Section "blog" }}{{ $ogType = "article" }}{{ end }}
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:type" content="{{ $ogType }}" />
+<meta property="og:description" content="{{ .Description }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="niklas-stephan.de" />
+<meta property="og:image" content="{{ $ogImage }}" />
+{{ if eq $ogType "article" }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" />
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}" />
+{{ end }}
+
+{{/* ======================================================
+     Twitter / X Card
+     ====================================================== */}}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:description" content="{{ .Description }}" />
+<meta name="twitter:image" content="{{ $ogImage }}" />
+
+{{/* ======================================================
+     PWA / Theme
+     ====================================================== */}}
+<link rel="manifest" href="/manifest.webmanifest" />
+<meta name="theme-color" content="#006a60" />

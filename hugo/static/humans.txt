@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://niklas-stephan.de/sitemap.xml
+
+# Disallow crawling of partials (though nginx already blocks them)
+Disallow: /partials/

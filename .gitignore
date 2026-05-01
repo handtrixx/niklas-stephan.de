@@ -1,0 +1,15 @@
+.env
+.DS_Store
+.zed
+.vs-code
+public/
+resources/
+.hugo_build.lock
+hugo_stats.json
+src/hugo/content
+/dist/
+src/hugo/public
+content/
+json/
+log/
+node_modules/

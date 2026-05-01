@@ -1,0 +1,18 @@
+<header class="navbar-container">
+    <div class="">
+        <nav class="navbar-toolbar">
+            <a class="{{ if .IsHome }}active{{ end }}" href="/">
+                <div>Home</div>
+            </a>
+            <a class="{{ if hasPrefix .RelPermalink "/about" }}active{{ end }}" href="/about/">
+                <div>About Me</div>
+            </a>
+            <a class="{{ if hasPrefix .RelPermalink "/wiki" }}active{{ end }}" href="/wiki/">
+                <span>Wiki</span>
+            </a>
+            <a class="{{ if hasPrefix .RelPermalink "/blog" }}active{{ end }}" href="/blog/">
+                <span>Blog</span>
+            </a>
+        </nav>
+    </div>
+</header>
