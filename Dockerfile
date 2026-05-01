@@ -3,6 +3,7 @@ FROM debian:trixie-slim
 RUN apt-get update && apt-get install -y \
     ca-certificates \
     nginx \
+    curl \
     hugo \
     nodejs \
     npm \
